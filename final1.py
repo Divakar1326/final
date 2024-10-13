@@ -75,10 +75,9 @@ def load_bert_model():
     return tokenizer, bert_model
 tokenizer, bert_model = load_bert_model()
 def get_sentence_embedding(sentence):
-    tokens = tokenizer(sentence, return_tensors='pt', truncation=True, padding=True)
-    with torch.no_grad():
-        outputs = bert_model(**tokens)
-    return outputs.last_hidden_state.mean(dim=1).numpy()
+    vectorizer = TfidfVectorizer()
+    sentence_embedding = vectorizer.fit_transform([sentence])
+    return np.mean(sentence_embedding.toarray(), axis=0)
 def extract_tfidf_features(sentences):
     vectorizer = TfidfVectorizer()
     return vectorizer.fit_transform(sentences).toarray()
