@@ -1,7 +1,5 @@
-warnings; sys
 streamlit
 numpy
-torch
 pandas
 seaborn
 matplotlib
@@ -14,4 +12,4 @@ indic-transliteration
 unidecode
 PyICU
 Pillow
-base64
+torch==1.9.0+cpu  # Specify CPU version of PyTorch
