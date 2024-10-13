@@ -66,7 +66,7 @@ def set_background(image_file):
         """,
         unsafe_allow_html=True
     )
-set_background("C:/Users/diva1/OneDrive/Pictures/finalpp.jpg")
+set_background("Pictures/finalpp.jpg")
 translator = GoogleTranslator()
 @st.cache_resource
 def load_bert_model():
