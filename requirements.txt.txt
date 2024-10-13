@@ -1,0 +1,17 @@
+warnings; sys
+streamlit
+numpy
+torch
+pandas
+seaborn
+matplotlib
+imbalanced-learn
+deep-translator
+scikit-learn
+transformers
+transliterate
+indic-transliteration
+unidecode
+PyICU
+Pillow
+base64
